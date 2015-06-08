@@ -1,0 +1,29 @@
+<%- model_class = Orcamento -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:idveiculo) %>:</strong></dt>
+  <dd><%= @orcamento.idveiculo %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:tipoPedido) %>:</strong></dt>
+  <dd><%= @orcamento.tipoPedido %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:idpecaOrcamento) %>:</strong></dt>
+  <dd><%= @orcamento.idpecaOrcamento %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:idServicoOrcamento) %>:</strong></dt>
+  <dd><%= @orcamento.idServicoOrcamento %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:vrTotal) %>:</strong></dt>
+  <dd><%= @orcamento.vrTotal %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:idFOrmaPgto) %>:</strong></dt>
+  <dd><%= @orcamento.idFOrmaPgto %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              orcamentos_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_orcamento_path(@orcamento), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              orcamento_path(@orcamento),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

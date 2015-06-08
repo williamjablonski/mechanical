@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  idveiculo: 1
+  tipoPedido: MyString
+  idpecaOrcamento: MyString
+  idServicoOrcamento: MyString
+  vrTotal: MyString
+  idFOrmaPgto: MyString
+
+two:
+  idveiculo: 1
+  tipoPedido: MyString
+  idpecaOrcamento: MyString
+  idServicoOrcamento: MyString
+  vrTotal: MyString
+  idFOrmaPgto: MyString

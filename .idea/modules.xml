@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/mechanical.iml" filepath="$PROJECT_DIR$/.idea/mechanical.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../rh/.idea/rh.iml" filepath="$PROJECT_DIR$/../rh/.idea/rh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../rh-rails/.idea/rh-rails.iml" filepath="$PROJECT_DIR$/../rh-rails/.idea/rh-rails.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,25 @@
+<%- model_class = Estoque -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:titulo) %>:</strong></dt>
+  <dd><%= @estoque.titulo %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:estoque) %>:</strong></dt>
+  <dd><%= @estoque.estoque %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:valorCusto) %>:</strong></dt>
+  <dd><%= @estoque.valorCusto %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:valorVenda) %>:</strong></dt>
+  <dd><%= @estoque.valorVenda %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              estoques_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_estoque_path(@estoque), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              estoque_path(@estoque),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
