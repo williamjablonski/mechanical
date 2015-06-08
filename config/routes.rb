@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   post   'login'   => 'dashboard#show'
   post   'dashboard'   => 'sessions#new'
   delete 'logout'  => 'sessions#destroy'
-  root 'sessions#new'
+  root 'dashboard#show'
 
   resources :orcamentos
   resources :fornecedors
