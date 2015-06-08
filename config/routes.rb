@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
-  get 'mechanical/login'
+  get 'dashboard/show'
 
-  get 'mechanical/dashboard'
+  get 'dashboard/show'
 
-  get 'mechanical/logon'git
-  root 'login'
+  get 'sessions/new'
+  get    'signup'  => 'usuarios#new'
+  get    'login'   => 'sessions#new'
+  post   'login'   => 'dashboard#show'
+  post   'dashboard'   => 'sessions#new'
+  delete 'logout'  => 'sessions#destroy'
+  root 'sessions#new'
 
   resources :orcamentos
   resources :fornecedors
