@@ -4,7 +4,11 @@ class VeiculosController < ApplicationController
   # GET /veiculos
   # GET /veiculos.json
   def index
-    @veiculos = Veiculo.all
+    if params[:search]
+      @veiculos = Veiculo.where("placa like ?","%#{ params[:search]}%")
+    else
+      @veiculos = Veiculo.all
+    end
   end
 
   # GET /veiculos/1

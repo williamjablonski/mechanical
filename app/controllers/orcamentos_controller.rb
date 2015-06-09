@@ -4,7 +4,11 @@ class OrcamentosController < ApplicationController
   # GET /orcamentos
   # GET /orcamentos.json
   def index
-    @orcamentos = Orcamento.all
+    if params[:search]
+      @orcamentos = Orcamento.where("idveiculo like ?","%#{ params[:search]}%")
+    else
+      @orcamentos = Orcamento.all
+    end
   end
 
   # GET /orcamentos/1

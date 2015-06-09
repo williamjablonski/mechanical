@@ -4,7 +4,11 @@ class FornecedorsController < ApplicationController
   # GET /fornecedors
   # GET /fornecedors.json
   def index
-    @fornecedors = Fornecedor.all
+    if params[:search]
+      @fornecedors = Fornecedor.where("empresa like ?","%#{ params[:search]}%")
+    else
+      @fornecedors = Fornecedor.all
+    end
   end
 
   # GET /fornecedors/1

@@ -4,7 +4,11 @@ class ServicosController < ApplicationController
   # GET /servicos
   # GET /servicos.json
   def index
-    @servicos = Servico.all
+    if params[:search]
+      @servicos = Servico.where("titulo like ?","%#{ params[:search]}%")
+    else
+      @servicos = Servico.all
+    end
   end
 
   # GET /servicos/1

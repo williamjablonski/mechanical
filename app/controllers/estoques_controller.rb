@@ -4,7 +4,11 @@ class EstoquesController < ApplicationController
   # GET /estoques
   # GET /estoques.json
   def index
-    @estoques = Estoque.all
+    if params[:search]
+      @estoques = Estoque.where("titulo like ?","%#{ params[:search]}%")
+    else
+      @estoques = Estoque.all
+    end
   end
 
   # GET /estoques/1
