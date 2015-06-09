@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/mechanical.iml" filepath="$PROJECT_DIR$/.idea/mechanical.iml" />
       <module fileurl="file://$PROJECT_DIR$/../rh/.idea/rh.iml" filepath="$PROJECT_DIR$/../rh/.idea/rh.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../rh-rails/.idea/rh-rails.iml" filepath="$PROJECT_DIR$/../rh-rails/.idea/rh-rails.iml" />
     </modules>
   </component>
 </project>
