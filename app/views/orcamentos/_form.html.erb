@@ -18,28 +18,32 @@
   <div class="control-group">
     <%= f.label :idveiculo, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :idveiculo, :class => 'form-control' %>
+      <%= f.collection_select(:idveiculo, Veiculo.all, :id, :placa , :class => 'form-control' ) %>
     </div>
     <%= error_span(@orcamento[:idveiculo]) %>
   </div>
   <div class="control-group">
     <%= f.label :tipoPedido, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :tipoPedido, :class => 'form-control' %>
+    <%= f.select(:tipoPedido) do %>
+          <% [['Orçamento', 1], ['Pedido', 2]].each do |c| -%>
+              <%= content_tag(:option, c.first, value: c.last) %>
+          <% end %>
+      <% end %>
     </div>
     <%= error_span(@orcamento[:tipoPedido]) %>
   </div>
   <div class="control-group">
     <%= f.label :idpecaOrcamento, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :idpecaOrcamento, :class => 'form-control' %>
+      <%= f.collection_select(:idpecaOrcamento, Estoque.all, :id, :titulo , :class => 'form-control' ) %>
     </div>
     <%= error_span(@orcamento[:idpecaOrcamento]) %>
   </div>
   <div class="control-group">
     <%= f.label :idServicoOrcamento, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :idServicoOrcamento, :class => 'form-control' %>
+      <%= f.collection_select(:idServicoOrcamento, Servico.all, :id, :titulo , :class => 'form-control' ) %>
     </div>
     <%= error_span(@orcamento[:idServicoOrcamento]) %>
   </div>
